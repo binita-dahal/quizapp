@@ -1,0 +1,89 @@
+{% extends 'base.html' %}
+{% block title %}Rules{% endblock title %}
+{% block style %}
+<style>
+    body {
+      background-color: #f8f9fa;
+      {% comment %} padding: 20px; {% endcomment %}
+    }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      background-color: #260562;
+      color: #ffffff;
+      padding: 30px;
+      border-radius: 5px;
+      box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+      margin-top: 20px;
+    }
+    h1 {
+      font-size: 28px;
+      font-weight: bold;
+      margin-bottom: 30px;
+      text-align: center;
+    }
+    p {
+      margin-bottom: 15px;
+    }
+    ul {
+      list-style-type: decimal;
+      padding-left: 20px;
+      margin-bottom: 15px;
+    }
+  </style>
+
+{% endblock style %}
+
+{% block body %}
+<body>
+    <div class="container">
+      <h1>Rules of <b>The Quiz Show </b></h1>
+      <p><b>The Quiz Show</b> is a quiz competition where contestants have to correctly answer a series of multiple-choice questions in order to advance to the next level / question. There are 15 questions in total and each question is worth a specific amount of money and no time limit is placed on contestants to come up with an answer. Contestants also get three Lifelines to assist them if they get stuck on a particular question.</p>
+      
+      <p><b>The Quiz Show</b> questions are structured according to five different Levels with each level increasing in difficulty. Each level contains three questions.</p>
+      
+      <p>Questions that are grouped into the same level will all be of similar difficulty. For example: Questions 1-3 make up the first Level and will contain the easiest questions. The second Level (Questions 4 – 6) will be slightly more difficult, followed by the third Level (Questions 7 – 9). The fourth Level (Questions 10-12) will consist of really difficult questions, followed by the fifth, and last, level (Questions 13 – 15) that will pose the most difficult questions of the game.</p>
+      
+      <p>It’s important to remember that the questions which make up each level will not necessarily relate to the same or even similar topics, but their overall level of difficulty will be the same. Also note that the question Levels should not be confused with the Safe Havens or the Question Value Structure that are both explained below.</p>
+      
+      <p>There are three 'safe havens' in the question structure (Questions five, ten and fifteen). Contestants accumulate money with each correct answer, but should they answer incorrectly before reaching a safe haven, they stand to lose a large amount of winnings. Below is a summary of the question value structure:</p>
+      
+      <ul>
+        <li>Question 1 - $100</li>
+        <li>Question 2 - $200</li>
+        <li>Question 3 - $300</li>
+        <li>Question 4 - $500</li>
+        <li>Question 5 - $1,000 Safe Haven</li>
+      </ul>
+      
+      <p>If contestants get question 5 wrong, they leave with nothing. If this question is answered correctly, contestants are guaranteed $1,000 even if they answer incorrectly before reaching the next safe haven at Question 10.</p>
+      
+      <ul>
+        <li>Question 6 - $2,000</li>
+        <li>Question 7 - $4,000</li>
+        <li>Question 8 - $8,000</li>
+        <li>Question 9 - $16,000</li>
+        <li>Question 10 - $32,000 Safe Haven</li>
+      </ul>
+      
+      <p>If contestants get question 10 wrong, they leave with $1,000. If this question is answered correctly, contestants are guaranteed $32,000 even if they answer incorrectly before reaching Question 15.</p>
+      
+      <ul>
+        <li>Question 11 - $64,000</li>
+        <li>Question 12 - $125,000</li>
+        <li>Question 13 - $250,000</li>
+        <li>Question 14 - $500,000</li>
+        <li>Question 15 - $1,000,000</li>
+      </ul>
+      
+      <p><strong>Lifelines</strong></p>
+      <p>Contestants are allowed three Lifelines that they can use at any point during the game. Each Lifeline can only be used once.</p>
+      
+      <ul>
+        <li><strong>50/50:</strong> Removes two wrong answers from the multiple-choice selection, leaving the contestant with only one correct and one incorrect option. This means they have a 50/50 chance.</li>
+        <li><strong>Ask the Audience:</strong> The audience is asked the same question as the contestant and a quick poll is done to show their answers. If the chart shows a clear majority for a specific answer, this Lifeline can be extremely helpful, but it’s still up to the contestant whether or not to go with the results obtained from the audience.</li>
+        <li><strong>Phone a Friend:</strong> Contestants are allowed to make a 30-second call to a friend or family member and ask them if they know the answer to the question.</li>
+      </ul>
+    </div>
+  {% endblock body %}
+

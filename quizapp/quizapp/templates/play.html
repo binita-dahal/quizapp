@@ -1,0 +1,96 @@
+{% extends 'base.html' %}
+
+{% block title %}Play Quiz{% endblock title %}
+
+{% block style %}
+<style>
+  /* Add your custom styles here */
+  .container {
+    max-width: 800px;
+    margin: 50 auto;
+    padding: 20px;
+  }
+  .question {
+    margin-bottom: 20px;
+  }
+  .options {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+  .option {
+    padding: 10px;
+    background-color: #f2f2f2;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  .option:hover {
+    background-color: #e0e0e0;
+  }
+  .selected {
+    background-color: #66bb6a;
+    color: #ffffff;
+  }
+  .selected:hover {
+    background-color: #43a047;
+  }
+  .button-container {
+    text-align: center;
+    margin-top: 20px;
+  }
+  .button-container button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #2196f3;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  .button-container button:hover {
+    background-color: #1976d2;
+  }
+</style>
+{% endblock style %}
+
+{% block body %}
+<div class="container">
+  <div class="question">
+    <h2>{{ question.question }}</h2>
+  </div>
+  <div class="options">
+    {% for option in options %}
+    <div class="option" onclick="selectOption(this)">
+      <p>{{ option }}</p>
+    </div>
+    {% endfor %}
+  </div>
+  <div class="button-container">
+    <button onclick="submitAnswer()">Submit Answer</button>
+  </div>
+</div>
+
+{% comment %} <script>
+  let selectedOption = null;
+
+  function selectOption(option) {
+    if (selectedOption) {
+      selectedOption.classList.remove("selected");
+    }
+    option.classList.add("selected");
+    selectedOption = option;
+  }
+
+  function submitAnswer() {
+    if (!selectedOption) {
+      alert("Please select an answer.");
+      return;
+    }
+
+    const answer = selectedOption.querySelector("p").textContent;
+    // Perform further logic or AJAX request to check the answer
+  }
+</script> {% endcomment %}
+{% endblock body %}
